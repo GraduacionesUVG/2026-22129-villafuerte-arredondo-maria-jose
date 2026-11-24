@@ -1,0 +1,45 @@
+# Dependencias
+node_modules/
+vendor/
+__pycache__/
+*.pyc
+
+# Variables de entorno (las claves reales nunca se suben; solo src/.env.example)
+.env
+.env.local
+.env.*.local
+
+# IDE y editores
+.idea/
+.vscode/
+.claude/
+*.swp
+*.swo
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Builds y registros
+dist/
+build/
+*.log
+
+# Temporales
+tmp/
+temp/
+
+# Expo y carpetas nativas generadas (se regeneran con expo prebuild)
+.expo/
+android/
+ios/
+
+# Cobertura de pruebas
+coverage/
+
+# Firma de la app y certificados
+*.jks
+*.p8
+*.p12
+*.key
+*.pem
