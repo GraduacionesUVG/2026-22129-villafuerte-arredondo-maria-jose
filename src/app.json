@@ -1,0 +1,104 @@
+{
+  "expo": {
+    "name": "QRisk",
+    "slug": "qrisk",
+    "version": "2.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.qrisk.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "QRisk usa la cámara únicamente para leer códigos QR. Las imágenes no salen de tu teléfono ni se guardan.",
+        "NSLocationWhenInUseUsageDescription": "QRisk usa tu ubicación solo para anotar dónde escaneaste el código. La ubicación se procesa en tu teléfono y no se envía a ningún servidor.",
+        "NSPhotoLibraryUsageDescription": "QRisk accede a tus fotos solo para que elijas la foto de contexto del afiche de advertencia. La imagen no sale de tu teléfono.",
+        "NSPhotoLibraryAddUsageDescription": "QRisk guarda el afiche de advertencia en tu galería cuando tú lo pides."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFC23D",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "softwareKeyboardLayoutMode": "resize",
+      "package": "com.qrisk.app",
+      "versionCode": 3,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "blockedPermissions": [
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "scheme": "qrisk",
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/android-icon-foreground.png",
+          "backgroundColor": "#FFC23D",
+          "imageWidth": 300,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "QRisk usa la camara unicamente para leer codigos QR. Las imagenes no salen de tu telefono ni se guardan.",
+          "recordAudioAndroid": false,
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "QRisk usa tu ubicacion solo para anotar donde escaneaste el codigo. La ubicacion se procesa en tu telefono y no se envia a ningun servidor."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "QRisk accede a tus fotos solo para que elijas la foto de contexto del afiche de advertencia. La imagen no sale de tu telefono.",
+          "cameraPermission": "QRisk usa la camara para tomar la foto de contexto del afiche de advertencia. La imagen no sale de tu telefono.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "QRisk accede a tus fotos para guardar el afiche de advertencia que generes.",
+          "savePhotosPermission": "QRisk guarda el afiche de advertencia en tu galeria cuando tu lo pides.",
+          "isAccessMediaLocationEnabled": false,
+          "granularPermissions": [
+            "photo"
+          ]
+        }
+      ],
+      "expo-sharing"
+    ],
+    "newArchEnabled": true,
+    "extra": {
+      "apiBaseUrl": "https://z0k9lhdru4.execute-api.us-east-1.amazonaws.com/dev",
+      "router": {},
+      "eas": {
+        "projectId": "3345f7d2-e471-40d1-91f8-ea237bdfc05a"
+      }
+    }
+  }
+}
